@@ -1,0 +1,53 @@
+---
+title: "**Teaching**"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 20px;
+      text-align: justify;
+  }
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+</style>
+
+<p style="line-height:3">
+
+<font size="4"> 
+
+### **London School of Economics**
+
+---
+
+
+
+ **Teaching Assistant (2020/21)**
+
++  Techniques of Spatial Economic Analysis ([GY460](https://www.lse.ac.uk/resources/calendar.bak/courseGuides/GY/2015_GY460.htm))
+
+<br>
+
+
+
+**Teaching Assistant (2019/20)**
+
++ Introduction to Economic Geography ([GY100](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/GY/2020_GY100.htm))
+
++ The Economic Geography of Growth and Development ([GY308](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/GY/2020_GY308.htm))
+
++ Techniques of Spatial Economic Analysis ([GY460](https://www.lse.ac.uk/resources/calendar.bak/courseGuides/GY/2015_GY460.htm))
+
+</font> 

@@ -1,0 +1,140 @@
+---
+title: "**Research**"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 20px;
+      text-align: justify;}
+
+code.r{ /* Code block */
+    font-size: 12px;}
+    
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;}
+</style>
+
+<p style="line-height:3">
+
+<br>
+
+<img src="bk_image_hr2.png" style="width:100%; border:0px solid" align="center">
+<p style="text-align:right">
+<font size="3"> 
+Source: HRSI
+</font> 
+</p>
+
+
+
+```{css, echo=FALSE}
+ul {
+  list-style-position: inside;
+  padding: -0em;
+  margin-left: 2em;
+  list-style-type:square;
+}
+
+```
+
+
+### <ins> Publications (Peer-Reviewed) </ins>
+
+
+
+
+
+<ul>
+  <li style = "text-indent: -1.4em; padding-top: 30px"> 
+<font size="4"> Carozzi, F., **Provenzano, S.**, Roth, S. (2022): Urban Density and COVID-19: Understanding the US Experience. In: The Annals of Regional Science. [Available here.](https://link.springer.com/article/10.1007/s00168-022-01193-z) </font></li>
+<p> </p>
+<details>
+  <summary style="color:#18bc9c">Abstract</summary>
+  <p> This paper revisits the debate around the link between population density and the severity of COVID-19 spread in the United States. We do so by conducting an empirical analysis based on graphical evidence, regression analysis and instrumental variable strategies borrowed from the agglomeration literature. Studying the period between the start of the epidemic and the beginning of the vaccination campaign at the end of 2020, we find that the cross-sectional relationship between density and COVID-19 deaths changed as the year evolved. Initially, denser counties experienced more COVID-19 deaths. Yet, by December, the relationship between COVID deaths and urban density was completely flat. This is consistent with evidence indicating density affected the timing of the outbreak -- with denser locations more likely to have an early outbreak -- yet had no influence on time-adjusted COVID-19 cases and deaths. Using data from Google, Facebook, the US Census and other sources, we investigate potential mechanisms behind these findings. </p>
+</details>
+
+  <li style = "text-indent: -1.4em; padding-top: 20px"> 
+  <font size="4">  **Provenzano, S.** (2017): The Empirics of Hidden Labor Force Dynamics in Germany. In: Journal of Economics and Statistics, Vol. 237(5): 373-406. [Available here.](https://www.degruyter.com/view/j/jbnst.2017.237.issue-5/jbnst-2017-0110/jbnst-2017-0110.xml) </font> </li>
+<p> </p>
+<details>
+  <summary style="color:#18bc9c">Abstract</summary>
+  <p> The unemployment rate is the core indicator when researchers and policy-makers assess the level of underemployment in an economy. However, accumulating evidence suggests that the unemployment rate is biased and underestimates the true level of underemployment. Closing this gap is especially important because the distortion systematically changes along the business cycle and affects the various subgroups of the population differently. Neglecting these effects when setting up policies might flaw its effectiveness and result in unexpected outcomes. Although the existence of these effects is widely agreed upon only little is known about the magnitude of these effects across various subgroups. Using a highly disaggregated dataset from Germany, this study examines the dynamics in labor force participation that go beyond the unemployment rate. Ample evidence is found that the discouraged and the added worker effect significantly affect particular subgroups in the German labor market. In addition, the discouraged and the added worker effect are generally found to be very symmetric in economic upturns and downturns. Moreover, the labor market reforms in Germany between 2003 and 2005 are found to have reduced the discouraged worker effect on average by 25%, leaving the added worker effect unchanged.</p>
+</details>
+</ul>
+
+
+---
+
+
+### <ins> Working Papers </ins>
+
+<ul>
+  <li style = "text-indent: -1.4em; padding-top: 20px"> 
+<font size="4"> **Provenzano, S.**: Accountability Failure in Isolated Areas: The Cost of Remoteness from the Capital City. *Revise \& Resubmit at the Journal of Development Economics.* </font></li>
+<p> </p>
+<details>
+  <summary style="color:#18bc9c">Abstract</summary>
+  <p>This paper documents that in Sub-Saharan Africa areas isolated from the capital city are less economically developed and examines potential underlying mechanisms. We apply a boundary-discontinuity design using national borders that divide pre-colonial ethnic homelands to obtain quasi-experimental variation in distance to the national capital city. We find that a one percent increase in distance to the capital city causes a decrease in the probability of detecting nightlights by 3 percentage points. Our results suggest that a lower provision of public goods in isolated areas is a key link between remoteness and economic performance. Despite receiving worse services, people who are isolated exhibit a higher level of trust in their political leaders. Further, isolated citizens consume the news less frequently and penalize their leaders less for misgovernance. We interpret these findings as pointing towards dysfunctional accountability mechanisms that reduce the incentives of vote-maximizing state executives to invest into isolated areas.</p>
+</details>
+
+  <li style = "text-indent: -1.4em; padding-top: 30px"> 
+<font size="4"> **Provenzano, S**, and Bull, H.: The Local Economic Impact of Mineral Mining in Africa: Evidence from four Decades of Satellite Imagery. [Available here](https://arxiv.org/pdf/2111.05783.pdf). </font>   </li>
+<p> </p>
+<details>
+  <summary style="color:#18bc9c">Abstract</summary>
+  <p> Mining projects often gain support from communities through promises of benefits to the local economy, though the empirical evidence is mixed: mineral assets are advantageous in some circumstances but lead to corruption and violence in others. To shed light on this apparent discrepancy, we significantly extend the coverage of previous work in this area by gathering satellite data that spans several decades and encompasses several institutional environments. Our dataset consists of one million 30m-resolution Landsat images between 1984 and 2019 from a 40km radius around 1,658 mineral deposits across the continent. Using state-of-the-art techniques in computer vision, we translate these images into economically meaningful indicators measuring local wealth and land use. We then use stacked event studies and difference-in-difference models to estimate the impact of mine openings and closings. We find strong evidence of a political resource curse at the local level. Although mining boosts the local economy in democratic countries, these gains are meagre in autocracies and come at the expense of an increase in localized conflict. Furthermore, our results show that the growth acceleration in mining areas is only temporary. While former mining areas maintain their increased wealth and urban size with respect to non-mining areas, there is no sustained divergence.</p>
+</details>
+
+
+
+</ul>
+
+
+---
+
+
+### <ins> Work in Progress </ins>
+
+<ul>
+  <li style = "text-indent: -1.4em; padding-top: 20px"> 
+<font size="4"> **Provenzano, S.**, Roth, S., and Sager, L.: Air Pollution and Respiratory Infectious Diseases. *Available upon request.*</font>
+  </li>
+  
+<p> </p>
+<p> </p>
+<p> </p>
+
+  <li style = "text-indent: -1.4em; padding-top: 20px"> 
+<font size="4"> **Provenzano, S.**: Regional Capitals and Economic Growth: Evidence from Boundary Reforms. *Available upon request.*</font>
+  </li>
+
+</ul>
+
+---
+
+### <ins> Book Chapter </ins>
+
+<ul>
+  <li style = "text-indent: -1.4em; padding-top: 20px"> 
+  <font size="4">  Carozzi, F., **Provenzano, S.**, and Roth, S. (2021): Bevölkerungsdichte und die Verbreitung des Corona-Virus in Städten. In: Just, T., and Plößl, F.: Die Europäische Stadt nach Corona: Strategien für resiliente Städte und Immobilien. Springer, p. 125-136. Available in *[German](https://link.springer.com/book/10.1007/978-3-658-35431-2)* and *[English](https://link.springer.com/book/10.1007/978-3-030-89788-8)*.
+  </font>
+  </li>
+</ul>
+
+
+<br>
+
+
+
+
+```{r pressure, echo=FALSE}
+
+```
+

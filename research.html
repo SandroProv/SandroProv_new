@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Research</title>
+
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Sandro Provenzano</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="cv.html">CV</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="data.html">Data</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto::s.provenzano@lse.ac.uk">
+    <span class="fas fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/SandroProv">
+    <span class="fab fa-github-square fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/s-provenzano/">
+    <span class="fab fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Research</strong></h1>
+
+</div>
+
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 20px;
+      text-align: justify;}
+
+code.r{ /* Code block */
+    font-size: 12px;}
+    
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;}
+</style>
+<p style="line-height:3">
+<p><br></p>
+<img src="bk_image_hr2.png" style="width:100%; border:0px solid" align="center">
+<p style="text-align:right">
+<font size="3"> Source: HRSI </font>
+</p>
+<style type="text/css">
+ul {
+  list-style-position: inside;
+  padding: -0em;
+  margin-left: 2em;
+  list-style-type:square;
+}
+
+</style>
+<div id="publications-peer-reviewed" class="section level3">
+<h3><ins> Publications (Peer-Reviewed) </ins></h3>
+<ul>
+<li style="text-indent: -1.4em; padding-top: 30px">
+<font size="4"> Carozzi, F., <strong>Provenzano, S.</strong>, Roth, S. (2022): Urban Density and COVID-19: Understanding the US Experience. In: The Annals of Regional Science. <a href="https://link.springer.com/article/10.1007/s00168-022-01193-z">Available here.</a> </font>
+</li>
+<p>
+</p>
+<details>
+<summary style="color:#18bc9c">
+Abstract
+</summary>
+<p>
+This paper revisits the debate around the link between population density and the severity of COVID-19 spread in the United States. We do so by conducting an empirical analysis based on graphical evidence, regression analysis and instrumental variable strategies borrowed from the agglomeration literature. Studying the period between the start of the epidemic and the beginning of the vaccination campaign at the end of 2020, we find that the cross-sectional relationship between density and COVID-19 deaths changed as the year evolved. Initially, denser counties experienced more COVID-19 deaths. Yet, by December, the relationship between COVID deaths and urban density was completely flat. This is consistent with evidence indicating density affected the timing of the outbreak – with denser locations more likely to have an early outbreak – yet had no influence on time-adjusted COVID-19 cases and deaths. Using data from Google, Facebook, the US Census and other sources, we investigate potential mechanisms behind these findings.
+</p>
+</details>
+<li style="text-indent: -1.4em; padding-top: 20px">
+<font size="4"> <strong>Provenzano, S.</strong> (2017): The Empirics of Hidden Labor Force Dynamics in Germany. In: Journal of Economics and Statistics, Vol. 237(5): 373-406. <a href="https://www.degruyter.com/view/j/jbnst.2017.237.issue-5/jbnst-2017-0110/jbnst-2017-0110.xml">Available here.</a> </font>
+</li>
+<p>
+</p>
+<details>
+<summary style="color:#18bc9c">
+Abstract
+</summary>
+<p>
+The unemployment rate is the core indicator when researchers and policy-makers assess the level of underemployment in an economy. However, accumulating evidence suggests that the unemployment rate is biased and underestimates the true level of underemployment. Closing this gap is especially important because the distortion systematically changes along the business cycle and affects the various subgroups of the population differently. Neglecting these effects when setting up policies might flaw its effectiveness and result in unexpected outcomes. Although the existence of these effects is widely agreed upon only little is known about the magnitude of these effects across various subgroups. Using a highly disaggregated dataset from Germany, this study examines the dynamics in labor force participation that go beyond the unemployment rate. Ample evidence is found that the discouraged and the added worker effect significantly affect particular subgroups in the German labor market. In addition, the discouraged and the added worker effect are generally found to be very symmetric in economic upturns and downturns. Moreover, the labor market reforms in Germany between 2003 and 2005 are found to have reduced the discouraged worker effect on average by 25%, leaving the added worker effect unchanged.
+</p>
+</details>
+</ul>
+<hr />
+</div>
+<div id="working-papers" class="section level3">
+<h3><ins> Working Papers </ins></h3>
+<ul>
+<li style="text-indent: -1.4em; padding-top: 20px">
+<font size="4"> <strong>Provenzano, S.</strong>: Accountability Failure in Isolated Areas: The Cost of Remoteness from the Capital City. <em>Revise &amp; Resubmit at the Journal of Development Economics.</em> </font>
+</li>
+<p>
+</p>
+<details>
+<summary style="color:#18bc9c">
+Abstract
+</summary>
+<p>
+This paper documents that in Sub-Saharan Africa areas isolated from the capital city are less economically developed and examines potential underlying mechanisms. We apply a boundary-discontinuity design using national borders that divide pre-colonial ethnic homelands to obtain quasi-experimental variation in distance to the national capital city. We find that a one percent increase in distance to the capital city causes a decrease in the probability of detecting nightlights by 3 percentage points. Our results suggest that a lower provision of public goods in isolated areas is a key link between remoteness and economic performance. Despite receiving worse services, people who are isolated exhibit a higher level of trust in their political leaders. Further, isolated citizens consume the news less frequently and penalize their leaders less for misgovernance. We interpret these findings as pointing towards dysfunctional accountability mechanisms that reduce the incentives of vote-maximizing state executives to invest into isolated areas.
+</p>
+</details>
+<li style="text-indent: -1.4em; padding-top: 30px">
+<font size="4"> <strong>Provenzano, S</strong>, and Bull, H.: The Local Economic Impact of Mineral Mining in Africa: Evidence from four Decades of Satellite Imagery. <a href="https://arxiv.org/pdf/2111.05783.pdf">Available here</a>. </font>
+</li>
+<p>
+</p>
+<details>
+<summary style="color:#18bc9c">
+Abstract
+</summary>
+<p>
+Mining projects often gain support from communities through promises of benefits to the local economy, though the empirical evidence is mixed: mineral assets are advantageous in some circumstances but lead to corruption and violence in others. To shed light on this apparent discrepancy, we significantly extend the coverage of previous work in this area by gathering satellite data that spans several decades and encompasses several institutional environments. Our dataset consists of one million 30m-resolution Landsat images between 1984 and 2019 from a 40km radius around 1,658 mineral deposits across the continent. Using state-of-the-art techniques in computer vision, we translate these images into economically meaningful indicators measuring local wealth and land use. We then use stacked event studies and difference-in-difference models to estimate the impact of mine openings and closings. We find strong evidence of a political resource curse at the local level. Although mining boosts the local economy in democratic countries, these gains are meagre in autocracies and come at the expense of an increase in localized conflict. Furthermore, our results show that the growth acceleration in mining areas is only temporary. While former mining areas maintain their increased wealth and urban size with respect to non-mining areas, there is no sustained divergence.
+</p>
+</details>
+</ul>
+<hr />
+</div>
+<div id="work-in-progress" class="section level3">
+<h3><ins> Work in Progress </ins></h3>
+<ul>
+<li style="text-indent: -1.4em; padding-top: 20px">
+<font size="4"> <strong>Provenzano, S.</strong>, Roth, S., and Sager, L.: Air Pollution and Respiratory Infectious Diseases. <em>Available upon request.</em></font>
+</li>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<li style="text-indent: -1.4em; padding-top: 20px">
+<font size="4"> <strong>Provenzano, S.</strong>: Regional Capitals and Economic Growth: Evidence from Boundary Reforms. <em>Available upon request.</em></font>
+</li>
+</ul>
+<hr />
+</div>
+<div id="book-chapter" class="section level3">
+<h3><ins> Book Chapter </ins></h3>
+<ul>
+<li style="text-indent: -1.4em; padding-top: 20px">
+<font size="4"> Carozzi, F., <strong>Provenzano, S.</strong>, and Roth, S. (2021): Bevölkerungsdichte und die Verbreitung des Corona-Virus in Städten. In: Just, T., and Plößl, F.: Die Europäische Stadt nach Corona: Strategien für resiliente Städte und Immobilien. Springer, p. 125-136. Available in <em><a href="https://link.springer.com/book/10.1007/978-3-658-35431-2">German</a></em> and <em><a href="https://link.springer.com/book/10.1007/978-3-030-89788-8">English</a></em>. </font>
+</li>
+</ul>
+<p><br></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

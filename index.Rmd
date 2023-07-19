@@ -1,0 +1,89 @@
+---
+title: '**Sandro Provenzano, PhD**'
+output: html_document
+includes:
+   in_header: google_analytics.html
+---
+
+
+
+<style type="text/css">
+
+
+h1.title {
+  font-size: 38px;
+  text-align: center;
+}
+
+h4.author {
+  font-size: 26px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: dimgray
+}
+
+<!-- font-family: "Times New Roman", Times, serif; -->
+
+body{ /* Normal  */
+      font-size: 20px;
+      text-align: justify;
+  }
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+
+.main-container {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+```{css, echo=FALSE}
+ul li {
+  list-style-position: inside;
+}
+```
+
+---
+
+<img src="sandro_pic_2.png" style="width:28%; border:0px solid; margin-right: 20px; padding-top: 8px" align="left">
+
+
+<p style="line-height:3">
+
+<font size="4"> 
+
+<ul style="list-style-type:square; padding-top: 3px; padding-bottom: 20px"> </ul>
+
+<p style="text-align:justify">
+I am an applied Economist and obtained my PhD at the London School of Economics in 2022. Currently, I am working as an Applied Scientist at Zalando SE focussing on topics related to Causal Inference \& Pricing.
+
+My fields of academic research are Development Economics, Urban Economics and Political Economy, with a focus on how the interactions between geographical and environmental factors and political processes shape local economic development. My research has a strong quantitative empirical emphasis and seeks to draw causal conclusion from quasi-experimental settings. It is characterized by combining state-of-the-art techniques in applied econometrics and machine learning with newly available data sources such as satellite images to overcome data constraints and focus on new and innovative research questions.
+</p>
+
+<ul style="list-style-type:square; padding-top: 1px"> </ul>
+
+<ul style="list-style-type:square; padding-top: 10px">
+  <li> You can find my CV [**here**](CV_Sandro_Provenzano.pdf). </li>
+  <li style="padding-top: 9px"> You can get in touch via **s.provenzano@lse.ac.uk**. </li>
+
+<ul style="list-style-type:square; padding-top: 60px"> </ul>
+
+
+
+</ul>
+
+
+
+---
+
+
+ </p>
+ 
+ </font> 

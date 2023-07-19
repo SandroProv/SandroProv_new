@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Spatial Data</title>
+
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Sandro Provenzano</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="cv.html">CV</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="data.html">Data</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto::s.provenzano@lse.ac.uk">
+    <span class="fas fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/SandroProv">
+    <span class="fab fa-github-square fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/s-provenzano/">
+    <span class="fab fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Spatial Data</strong></h1>
+
+</div>
+
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 20px;
+      text-align: left;
+  }
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+</style>
+<p style="line-height:3">
+<p><br></p>
+<img src="berlin_night.png" style="width:100%; border:0px solid" align="center">
+<p style="text-align:right">
+<font size="3"> Source: ESA </font>
+</p>
+<p><font size="4"></p>
+<p style="text-align:justify">
+Here’s a list with some resources for spatial data that I have used in my research.
+</p>
+<hr />
+<div id="nightlights" class="section level4">
+<h4><strong>Nightlights</strong></h4>
+<ul>
+<li>VIIRS (since 2012) <a href="https://ngdc.noaa.gov/eog/viirs/download_dnb_composites.html" class="uri">https://ngdc.noaa.gov/eog/viirs/download_dnb_composites.html</a></li>
+<li>DMSP-OLS (1992-2013) <a href="https://ngdc.noaa.gov/eog/dmsp/downloadV4composites.html" class="uri">https://ngdc.noaa.gov/eog/dmsp/downloadV4composites.html</a></li>
+</ul>
+<hr />
+</div>
+<div id="geocoded-surveys" class="section level4">
+<h4><strong>Geocoded Surveys</strong></h4>
+<ul>
+<li>Afrobarometer <a href="https://www.afrobarometer.org/" class="uri">https://www.afrobarometer.org/</a></li>
+<li>Demographic and Health Survey (DHS) <a href="https://dhsprogram.com/" class="uri">https://dhsprogram.com/</a></li>
+<li>World Bank LSMS <a href="http://surveys.worldbank.org/lsms/about-lsms" class="uri">http://surveys.worldbank.org/lsms/about-lsms</a></li>
+</ul>
+<hr />
+</div>
+<div id="geographic-variables" class="section level4">
+<h4><strong>Geographic Variables</strong></h4>
+<ul>
+<li>Ruggedness <a href="https://diegopuga.org/data/rugged/" class="uri">https://diegopuga.org/data/rugged/</a></li>
+<li>Caloric Suitability Index <a href="https://ozak.github.io/Caloric-Suitability-Index/" class="uri">https://ozak.github.io/Caloric-Suitability-Index/</a></li>
+<li>Elevation (NASA) <a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/" class="uri">https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/</a></li>
+<li>Land Cover <a href="http://maps.elie.ucl.ac.be/CCI/viewer/index.php" class="uri">http://maps.elie.ucl.ac.be/CCI/viewer/index.php</a></li>
+<li>Precipitation and Temperature <a href="http://chelsa-climate.org/downloads/" class="uri">http://chelsa-climate.org/downloads/</a></li>
+<li>Malaria Ecology Index from the paper Kiszewski et al (2004) shared by Gordon McCord   <a href="https://gps.ucsd.edu/_files/faculty/mccord/mccord_research_malaria-index.zip" class="uri">https://gps.ucsd.edu/_files/faculty/mccord/mccord_research_malaria-index.zip</a></li>
+</ul>
+<hr />
+</div>
+<div id="country-shapes-including-admin-1-and--2" class="section level4">
+<h4><strong>Country Shapes (including Admin-1 and -2)</strong></h4>
+<ul>
+<li>GADM <a href="https://gadm.org/data.html" class="uri">https://gadm.org/data.html</a></li>
+<li>GAUL <a href="https://data.apps.fao.org/map/catalog/srv/api/records/9c35ba10-5649-41c8-bdfc-eb78e9e65654" class="uri">https://data.apps.fao.org/map/catalog/srv/api/records/9c35ba10-5649-41c8-bdfc-eb78e9e65654</a></li>
+</ul>
+<hr />
+</div>
+<div id="population-grid" class="section level4">
+<h4><strong>Population Grid</strong></h4>
+<ul>
+<li>Worldpop <a href="https://www.worldpop.org/doi/10.5258/SOTON/WP00004" class="uri">https://www.worldpop.org/doi/10.5258/SOTON/WP00004</a></li>
+<li>UNEP Sioux Falls <a href="https://na.unep.net/siouxfalls/datasets/datalist.php" class="uri">https://na.unep.net/siouxfalls/datasets/datalist.php</a></li>
+</ul>
+<hr />
+</div>
+<div id="cities" class="section level4">
+<h4><strong>Cities</strong></h4>
+<ul>
+<li><a href="https://www.africapolis.org" class="uri">https://www.africapolis.org</a></li>
+</ul>
+<hr />
+</div>
+<div id="ethnic-maps-africa" class="section level4">
+<h4><strong>Ethnic Maps Africa</strong></h4>
+<ul>
+<li>Murdock Maps <a href="http://worldmap.harvard.edu/data/geonode:Murdock_EA_2011_vkZ" class="uri">http://worldmap.harvard.edu/data/geonode:Murdock_EA_2011_vkZ</a></li>
+<li>GREG <a href="http://worldmap.harvard.edu/data/geonode:GREG_0vV" class="uri">http://worldmap.harvard.edu/data/geonode:GREG_0vV</a></li>
+</ul>
+<hr />
+</div>
+<div id="conflict-data" class="section level4">
+<h4><strong>Conflict Data</strong></h4>
+<ul>
+<li>Uppsala Conflict Data Program <a href="https://ucdp.uu.se/" class="uri">https://ucdp.uu.se/</a></li>
+<li>Acled <a href="https://www.acleddata.com/" class="uri">https://www.acleddata.com/</a></li>
+<li>Ethnic Power Relations (ETH) <a href="https://icr.ethz.ch/data/epr/" class="uri">https://icr.ethz.ch/data/epr/</a></li>
+</ul>
+<hr />
+</div>
+<div id="satellite-imagery" class="section level4">
+<h4><strong>Satellite Imagery</strong></h4>
+<ul>
+<li>Google Earth Engine <a href="https://developers.google.com/earth-engine/datasets/" class="uri">https://developers.google.com/earth-engine/datasets/</a></li>
+<li>Sentinel 2 (ESA) <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2" class="uri">https://sentinel.esa.int/web/sentinel/missions/sentinel-2</a></li>
+<li>Landsat (USGS) <a href="https://www.usgs.gov/land-resources/nli/landsat/landsat-data-access?qt-science_support_page_related_con=0#qt-science_support_page_related_con" class="uri">https://www.usgs.gov/land-resources/nli/landsat/landsat-data-access?qt-science_support_page_related_con=0#qt-science_support_page_related_con</a></li>
+</ul>
+<hr />
+</div>
+<div id="landcover-grids-30m" class="section level4">
+<h4><strong>Landcover Grids &lt; 30m</strong></h4>
+<ul>
+<li>Global Human Settlement Layer (GHSL) <a href="https://ghsl.jrc.ec.europa.eu/download.php" class="uri">https://ghsl.jrc.ec.europa.eu/download.php</a></li>
+<li>Global Urban Footprint (GUF) <a href="https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-11725/20508_read-47944/" class="uri">https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-11725/20508_read-47944/</a></li>
+<li>ESA African land cover <a href="https://www.esa.int/ESA_Multimedia/Images/2017/10/African_land_cover" class="uri">https://www.esa.int/ESA_Multimedia/Images/2017/10/African_land_cover</a></li>
+<li>NASA Cropland <a href="https://earthdata.nasa.gov/esds/competitive-programs/measures/gcad30-through-landsat-and-modis" class="uri">https://earthdata.nasa.gov/esds/competitive-programs/measures/gcad30-through-landsat-and-modis</a></li>
+<li>Facebook, CIESIN &amp; World Bank High Resolution Settlement Layer <a href="https://ciesin.columbia.edu/data/hrsl/" class="uri">https://ciesin.columbia.edu/data/hrsl/</a></li>
+</ul>
+<hr />
+</div>
+<div id="resources-and-mining" class="section level4">
+<h4><strong>Resources and Mining</strong></h4>
+<ul>
+<li>USGS <a href="https://mrdata.usgs.gov/" class="uri">https://mrdata.usgs.gov/</a></li>
+<li>World Resources Institute <a href="https://www.wri.org/resources" class="uri">https://www.wri.org/resources</a></li>
+</ul>
+<hr />
+</div>
+<div id="further-data-collections" class="section level4">
+<h4><strong>Further Data Collections</strong></h4>
+<ul>
+<li>WorldGeoDatasets <a href="http://www.worldgeodatasets.com/basemaps/index.html" class="uri">http://www.worldgeodatasets.com/basemaps/index.html</a></li>
+<li>AIDDATA <a href="https://www.aiddata.org/datasets" class="uri">https://www.aiddata.org/datasets</a></li>
+<li>PCA <a href="https://platform.princetonclimate.com/PCA_Platform/index.html" class="uri">https://platform.princetonclimate.com/PCA_Platform/index.html</a></li>
+<li>data|in|space <a href="https://datainspace.org/" class="uri">https://datainspace.org/</a></li>
+<li>Free GIS data <a href="https://freegisdata.rtwilson.com/" class="uri">https://freegisdata.rtwilson.com/</a></li>
+<li>UPenn GIS Global <a href="https://guides.library.upenn.edu/globalgis" class="uri">https://guides.library.upenn.edu/globalgis</a></li>
+<li>GDELT <a href="https://www.gdeltproject.org/data.html" class="uri">https://www.gdeltproject.org/data.html</a></li>
+</ul>
+<p><br></p>
+<hr />
+</div>
+<div id="software" class="section level4">
+<h4><strong>Software</strong></h4>
+<p style="text-align:justify">
+R is a wonderful programming language for data manipulation and statistical programming. R is also extremely powerful when it comes to spatial data. The main packages for GIS in R to get familiar with are <a href="https://cran.r-project.org/web/packages/sp/sp.pdf"><strong>sp</strong></a> for vectorized representations of spatial data and <a href="https://cran.r-project.org/web/packages/raster/raster.pdf"><strong>raster</strong></a> for spatial grids. The <a href="https://cran.r-project.org/web/packages/sf/sf.pdf"><strong>sf</strong></a> package is certainly also worth mentioning and can be considered a new and improved version of sp. But there are many more useful packages and their number is constantly growing. Here are some links to tutorials to get you started with GIS in R:
+</p>
+<ul>
+<li><a href="http://www.nickeubank.com/gis-in-r/" class="uri">http://www.nickeubank.com/gis-in-r/</a></li>
+<li><a href="https://www.jessesadler.com/post/gis-with-r-intro/" class="uri">https://www.jessesadler.com/post/gis-with-r-intro/</a></li>
+<li><a href="https://www.rspatial.org/" class="uri">https://www.rspatial.org/</a></li>
+</ul>
+<p></font></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
